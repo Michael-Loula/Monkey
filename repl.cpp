@@ -1,4 +1,4 @@
-#include "lexer.hpp"
+#include "lextools/lexer.hpp"
 #include <iostream>
 
 //VERY basic repl
