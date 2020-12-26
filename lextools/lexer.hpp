@@ -1,4 +1,4 @@
-#include "token.hpp"
+#include "../token.hpp"
 #include <map>
 #include <vector>
 
@@ -23,6 +23,11 @@ class Lexer {
         this->pos = 0;
         keywords.insert(std::pair<std::string,token_type>("fn",token_type::FUNCTION));
         keywords.insert(std::pair<std::string,token_type>("let",token_type::LET));
+        keywords.insert(std::pair<std::string,token_type>("true",token_type::TRUE));
+        keywords.insert(std::pair<std::string,token_type>("false",token_type::FALSE));
+        keywords.insert(std::pair<std::string,token_type>("return",token_type::RETURN));
+        keywords.insert(std::pair<std::string,token_type>("if",token_type::IF));
+        keywords.insert(std::pair<std::string,token_type>("else",token_type::ELSE));
     }
 
     int read_char();
